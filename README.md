@@ -48,7 +48,7 @@ The following components are part of the app:
 
 To run the Task Manager app locally:
 
-<b>1. Clone the repository:</b>
+1. Clone the repository:
    ```bash
    git clone https://github.com/arshnoork-101/Task-Manager.git
     ```
