@@ -20,30 +20,11 @@
 
 ## 💻 Components
 
-The following components are part of the app:
-
-### 1. **CartTodoList**
-   - Manages the task list and includes functionality to add, delete, update, and clear tasks.
-   - Provides a user-friendly interface for interacting with tasks.
-
-### 2. **CartNav**
-   - Displays the navigation bar and includes a shopping cart icon.
-   - Shows a task counter (the number of tasks currently in the list).
-
-### 3. **TaskItem**
-   - Represents an individual task in the task list.
-   - Includes options to update or delete the task.
-
-### 4. **Buttons**
-   - Four reusable buttons component used throughout the app.
-   - Styled to indicate actions like adding, deleting, editing or clearing tasks.
-
-### 5. **Modal**
-   - A reusable modal for confirming actions like task deletion or completion.
-
-### 6. **InputField**
-   - A reusable input field component for adding tasks.
-   - Ensures uniform styling and validation across input fields in the app.
+- **CartTodoList**: Manages tasks with add, delete, update, and clear functions.  
+- **CartNav**: Displays navigation with a cart icon and task counter.  
+- **TaskItem**: Represents a task with update and delete options.  
+- **Buttons**: Reusable buttons for add, delete, edit, and clear actions.  
+- **InputField**: Reusable input with uniform styling and validation.  
 
 ## 🏁 Getting Started:
 
