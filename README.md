@@ -53,18 +53,18 @@ To run the Task Manager app locally:
    git clone https://github.com/arshnoork-101/Task-Manager.git
     ```
 
-<b>2. Navigate to the frontend directory:</b>
+2. Navigate to the frontend directory:
 
     ```bash
     cd Task-Manager/frontend
     ```
 
-<b>3. Install the dependencies:</b>
+3. Install the dependencies:
     ```bash
     npm install
     ```
 
-<b>4. Run the app:</b>
+4. Run the app:
     ```bash
     npm run dev
     ```
