@@ -1,8 +1,9 @@
 # Task-Manager App
 
+## 📙 About: 
 **Task Manager** as the name suggests is a task management application that allows users to efficiently create, organize, and track their tasks. 
 
-## Features:
+## 🌠 Features:
 
 - Create and organize tasks
 - Edit and update task details
@@ -10,14 +11,14 @@
 - Clear all tasks
 - View a live task counter in the navigation bar
 
-## Technologies Used:
+## 🧰 Technologies Used:
 
 - **Frontend**: ReactJS, HTML, CSS, JavaScript
 - **Version Control**: Git and GitHub for repository management
 - **State Management**: Redux ToolKit
 - **Other**: React Router (for routing), React Icons (for icons)
 
-## Components
+## 💻 Components
 
 The following components are part of the app:
 
@@ -33,9 +34,9 @@ The following components are part of the app:
    - Represents an individual task in the task list.
    - Includes options to update or delete the task.
 
-### 4. **`Button`**
-   - A reusable button component used throughout the app.
-   - Styled to indicate actions like adding, deleting, or clearing tasks.
+### 4. **`Buttons`**
+   - Four reusable buttons component used throughout the app.
+   - Styled to indicate actions like adding, deleting, editing or clearing tasks.
 
 ### 5. **`Modal`**
    - A reusable modal for confirming actions like task deletion or completion.
@@ -44,7 +45,7 @@ The following components are part of the app:
    - A reusable input field component for adding tasks.
    - Ensures uniform styling and validation across input fields in the app.
 
-## Installation
+## 🏁 Getting Started:
 
 To run the Task Manager app locally:
 
@@ -69,7 +70,7 @@ To run the Task Manager app locally:
     npm run dev
     ```
 
-## Welcoming Suggestions:
+## 📃 Welcoming Suggestions:
 We always welcome new ideas, suggestions, or improvements from the community. If you have any thoughts on how we can make Task Manager better, feel free to open an issue or create a pull request. Your suggestions will help us enhance the project and provide even more value to its users! Thank You.
 
 
