@@ -11,6 +11,9 @@
 - Clear all tasks
 - View a live task counter in the navigation bar
 
+> **Note:** This project is still in progress. The current version is not final; it has been made public to gather feedback and improve it.
+
+
 ## 🧰 Technologies Used:
 
 - **Frontend**: ReactJS, HTML, CSS, JavaScript
