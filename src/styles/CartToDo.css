@@ -1,0 +1,99 @@
+/* src/styles/CartTodoList.css */
+
+/* General container styles */
+div {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .outerDiv{
+    /* width: relative; */
+    background-color: black;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #333;
+    display: inline;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  /* Styles for buttons */
+  .add-button {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .add-button:hover {
+    background-color: #45a049;
+  }
+  
+  .delete-button {
+    background-color: #2196f3;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .delete-button:hover {
+    background-color: #1976d2;
+  }
+  
+  .clear-button {
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .clear-button:hover {
+    background-color: #e53935;
+  }
+
+  .update-button{
+    background-color: #f1c40f ;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Task list styling */
+  .task-list {
+    list-style: none;
+    padding: 0;
+    width: max-content;  
+}
+  
+  .task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* CartNav absolute positioning */
+  .cartDiv {
+    display: inline;
+  }
+
+  .btnSpan{
+    margin-left: 10px;
+  }
