@@ -38,10 +38,15 @@ function CartTodoList() {
   };
 
   const ClearAll = () => {
-    dispatch(clearAll());
-    localStorage.removeItem("tasks");
-    setNewTask(""); // Clear the input field
-    setEditIndex(null); // Reset edit state
+    const confirmClear = window.confirm(
+      "Are you sure you want to delete all tasks?"
+    );
+    if (confirmClear) {
+      dispatch(clearAll());
+      localStorage.removeItem("tasks");
+      setNewTask(""); // Clear the input field
+      setEditIndex(null); // Reset edit state
+    }
   };
 
   const UpdateTask = () => {
