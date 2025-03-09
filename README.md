@@ -9,6 +9,7 @@
 - Edit and update task details
 - Delete tasks
 - Clear all tasks
+- Retrieve Previous Tasks
 - View a live task counter in the navigation bar
 
 > **Note**  
@@ -19,7 +20,7 @@
 
 - **Frontend**: ReactJS, HTML, CSS, JavaScript
 - **Version Control**: Git and GitHub for repository management
-- **State Management**: Redux ToolKit
+- **State Management**: Redux Tool Kit
 - **Other**: React Router (for routing), React Icons (for icons)
 
 ## 💻 Components
