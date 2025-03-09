@@ -20,7 +20,7 @@ function CartTodoList() {
 
   // Save tasks to localStorage when they change
   useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
   const AddTask = () => {
@@ -32,10 +32,16 @@ function CartTodoList() {
 
   const DeleteTask = (index) => {
     dispatch(deleteItem(index));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    setNewTask(""); // Clear the input field
+    setEditIndex(null); // Reset the edit state
   };
 
   const ClearAll = () => {
     dispatch(clearAll());
+    localStorage.removeItem("tasks");
+    setNewTask(""); // Clear the input field
+    setEditIndex(null); // Reset edit state
   };
 
   const UpdateTask = () => {
