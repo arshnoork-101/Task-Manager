@@ -1,6 +1,6 @@
 /* src/styles/CartTodoList.css */
 *{
-  background-color: black;
+  background-color: rgb(46, 43, 43);
 }
 
 /* General container styles */
@@ -17,7 +17,6 @@ div {
     width: 90%; 
   }
   
-
   h1 {
     font-size: 24px;
     color: white;
