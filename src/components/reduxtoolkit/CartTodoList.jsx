@@ -39,26 +39,39 @@ function CartTodoList() {
 
   return (
     <div className='outerDiv'>
+      <br /> 
       <center>
-        <div className="flex items-center justify-between mb-6 relative">
           <h1 className="font-bold"><u>TO DO LIST CART</u></h1>
-          <span> </span>
-          <span>
-            <div className="cartDiv">
-              <CartNav />
-            </div>
-          </span>
-        </div>
+          <span> </span> <br />
+        <br />
         <div>
+          <div className='secClass'>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
           <input
             type="text"
             placeholder="Enter a task..."
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
+            onKeyDown={(e)=>{
+              if(e.key=='Enter'){
+                e.preventDefault(); // Prevents form submission 
+                editIndex !== null ? UpdateTask() : AddTask();
+              }
+            }
+
+            }
           />
           <button className="add-button" onClick={editIndex !== null ? UpdateTask : AddTask}>
             {editIndex !== null ? 'Update Item' : 'Add Item'}
           </button>
+          <span>
+            &nbsp; &nbsp;
+            <div className="cartDiv">
+              <CartNav />
+            </div>
+          </span>
+          </div>
+          <center>
           <ul className="task-list">
             {tasks.map((task, index) => (
               <li key={index}>
@@ -74,12 +87,13 @@ function CartTodoList() {
               </li>
             ))}
           </ul>
+          </center>
           <button className="clear-button" onClick={ClearAll}>
             Clear All
           </button>
         </div>
-      </center>
-    </div>
+        </center>    
+        </div>
   );
 }
 

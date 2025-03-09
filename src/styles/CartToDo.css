@@ -1,20 +1,26 @@
 /* src/styles/CartTodoList.css */
+*{
+  background-color: black;
+}
 
 /* General container styles */
 div {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #fff;
+    font-size: 20px;
+  }
+
+  .outerDiv {
+    border: 2px solid #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin: 20px auto; 
+    width: 90%; 
   }
   
-  .outerDiv{
-    /* width: relative; */
-    background-color: black;
-  }
 
   h1 {
     font-size: 24px;
-    color: #333;
+    color: white;
     display: inline;
   }
   
@@ -23,6 +29,7 @@ div {
     border: none;
     cursor: pointer;
     margin: 5px;
+    font-size: 20px;
   }
   
   /* Styles for buttons */
@@ -33,7 +40,7 @@ div {
   }
   
   .add-button:hover {
-    background-color: #45a049;
+    background-color: green;
   }
   
   .delete-button {
@@ -43,7 +50,7 @@ div {
   }
   
   .delete-button:hover {
-    background-color: #1976d2;
+    background-color: rgb(34, 34, 196);
   }
   
   .clear-button {
@@ -53,47 +60,62 @@ div {
   }
   
   .clear-button:hover {
-    background-color: #e53935;
+    background-color: red;
   }
 
   .update-button{
-    background-color: #f1c40f ;
+    background-color: palevioletred ;
     color: white;
     border-radius: 5px;
+  }
+
+  .update-button:hover {
+    background-color: rgb(186, 85, 102);
   }
   
   /* Task list styling */
   .task-list {
     list-style: none;
-    padding: 0;
-    width: max-content;  
+    width: max-content; 
 }
   
   .task-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 20px;
+    padding: 5px 10px;
     background-color: #fff;
     margin: 4px 0;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-out;
+    min-width: none;
+  }
+  .task-list li:hover {
+    transform: scale(1.02);
   }
   
   input {
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid white;
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
+    color: white;
   }
   
   /* CartNav absolute positioning */
   .cartDiv {
     display: inline;
+    margin: 5px;
+    color: white;
   }
 
   .btnSpan{
-    margin-left: 10px;
+    margin: 10px;
+    background-color: #fff;
+  }
+  .secClass{
+    position: relative;
   }
