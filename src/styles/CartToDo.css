@@ -11,9 +11,9 @@ div {
 
   .outerDiv {
     border: 2px solid #fff; 
-    padding: 20px; 
+    padding: 20px ; 
     border-radius: 10px; 
-    margin: 20px auto; 
+    margin: 20px ; 
     width: 90%; 
   }
   
@@ -69,27 +69,9 @@ div {
   }
 
   .update-button:hover {
-    background-color: rgb(186, 85, 102);
+    background-color: rgb(173, 44, 66);
   }
-  
-  /* Task list styling */
-  .task-list {
-    list-style: none;
-    width: max-content; 
-}
-  
-  .task-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-    background-color: #fff;
-    margin: 4px 0;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-out;
-    min-width: none;
-  }
+
   .task-list li:hover {
     transform: scale(1.02);
   }
@@ -118,3 +100,67 @@ div {
   .secClass{
     position: relative;
   }
+
+  select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    margin: 10px;
+  }
+  
+  option {
+    padding: 5px;
+    background-color: white;
+  }  
+  
+  select:focus, select:hover {
+    border-color: #007BFF;
+  }
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  max-width: fit-content; 
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-out;
+  width: auto;
+}
+
+/* Hover effect for task items */
+.task-list li:hover {
+  transform: scale(1.02);
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .task-list li {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .task-list select,
+  .task-list button {
+    width: 100%; /* Full width for select and buttons */
+    margin: 5px 0;
+  }
+  .task-list{
+    max-width: 800px; 
+  }
+}

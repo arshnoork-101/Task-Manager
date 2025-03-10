@@ -8,7 +8,7 @@ const ListSlice = createSlice({
   },
   reducers: {
     addItem(state, action) {
-      state.items.push(action.payload);
+      state.items.push({task:action.payload, status:"Pending"});
     },
     deleteItem(state, action) {
       state.items.splice(action.payload, 1);
@@ -17,9 +17,9 @@ const ListSlice = createSlice({
       state.items = [];
     },
     updateItem(state, action) {
-      const { index, updatedTask } = action.payload;
-      state.items[index] = updatedTask;
-    },
+      const { index, updatedTask, updatedStatus } = action.payload;
+      if (updatedTask !== undefined) state.items[index].task = updatedTask;
+      if (updatedStatus !== undefined) state.items[index].status = updatedStatus;    },
   },
 });
 
