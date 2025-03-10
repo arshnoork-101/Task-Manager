@@ -19,7 +19,8 @@ const ListSlice = createSlice({
     updateItem(state, action) {
       const { index, updatedTask, updatedStatus } = action.payload;
       if (updatedTask !== undefined) state.items[index].task = updatedTask;
-      if (updatedStatus !== undefined) state.items[index].status = updatedStatus;    },
+      if (updatedStatus !== undefined) state.items[index].status = updatedStatus;
+    },
   },
 });
 
