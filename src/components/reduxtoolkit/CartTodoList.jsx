@@ -9,18 +9,17 @@ function CartTodoList() {
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.cart.items);
 
-// Load tasks from local storage on component mount
-useEffect(() => {
-  const storedTasks = localStorage.getItem("tasks");
-  if (storedTasks) {
-    JSON.parse(storedTasks).forEach((task) => dispatch(addItem(task.task)));
-  }
-}, [dispatch]);
+  // Local Storage
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem("tasks"));
+    if (storedTasks) {
+      storedTasks.forEach((task) => dispatch(addItem(task.task))); 
+    }
+  }, [dispatch]);
 
-// Save tasks to local storage whenever tasks change
-useEffect(() => {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-}, [tasks]);
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks)); // Save to localStorage
+  }, [tasks]);
 
   const AddTask = () => {
     if (newTask.trim() !== "") {
