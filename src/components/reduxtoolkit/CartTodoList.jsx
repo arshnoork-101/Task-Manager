@@ -89,7 +89,10 @@ useEffect(() => {
         <center>
           <ul className="task-list">
             {tasks.map((taskObj, index) => (
-              <li className="myLI" key={index}>
+              <li
+                key={index}
+                className={`myLI ${editIndex === index ? "editing-task" : "myLI"}`}
+              >
                 {taskObj.task}
                 <select
                   value={taskObj.status}
@@ -106,7 +109,7 @@ useEffect(() => {
                   className="update-button"
                   onClick={() => StartEditing(index)}
                 >
-                  Edit
+                  {editIndex === index ? "Editing..." : "Edit"}
                 </button>
                 <button
                   className="delete-button"

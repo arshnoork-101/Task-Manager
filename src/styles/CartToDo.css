@@ -164,3 +164,8 @@ div {
     max-width: 800px; 
   }
 }
+
+.editing-task {
+  background-color: rgb(255, 255, 147) !important;
+  color: black;
+}
