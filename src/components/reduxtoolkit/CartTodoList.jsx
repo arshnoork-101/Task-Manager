@@ -32,7 +32,11 @@ useEffect(() => {
   const DeleteTask = (index) => {
     dispatch(deleteItem(index));
     setNewTask("");
-  };
+    // If the index being edited is to be deleted, reset edit mode.
+    if (editIndex === index) {
+      setEditIndex(null);  
+    }
+  };  
 
   const ClearAll = () => {
     const confirmClear = window.confirm(
