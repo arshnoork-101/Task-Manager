@@ -7,8 +7,12 @@ const ListSlice = createSlice({
     items: [],
   },
   reducers: {
+    // Push task and status as attributes to items to prevent data loss
     addItem(state, action) {
-      state.items.push({task:action.payload, status:"Pending"});
+      state.items.push({
+        task: action.payload.task,
+        status: action.payload.status || "Pending", // Default to Pending if status is missing
+      });
     },
     deleteItem(state, action) {
       state.items.splice(action.payload, 1);

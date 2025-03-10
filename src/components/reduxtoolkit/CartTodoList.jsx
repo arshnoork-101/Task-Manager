@@ -13,21 +13,26 @@ function CartTodoList() {
 useEffect(() => {
   const storedTasks = localStorage.getItem("tasks");
   if (storedTasks) {
-    JSON.parse(storedTasks).forEach((task) => dispatch(addItem(task.task)));
+    JSON.parse(storedTasks).forEach((taskObj) =>
+      // Passing the full object to store both task and status to LS
+      dispatch(addItem(taskObj)) 
+    );
   }
 }, [dispatch]);
+
 
 // Save tasks to local storage whenever tasks change
 useEffect(() => {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }, [tasks]);
 
-  const AddTask = () => {
-    if (newTask.trim() !== "") {
-      dispatch(addItem(newTask));
-      setNewTask("");
-    }
-  };
+const AddTask = () => {
+  if (newTask.trim() !== "") {
+    // Dispatching Item
+    dispatch(addItem({ task: newTask, status: "Pending" })); 
+    setNewTask("");
+  }
+};
 
   const DeleteTask = (index) => {
     dispatch(deleteItem(index));
@@ -93,14 +98,9 @@ useEffect(() => {
         <center>
           <ul className="task-list">
             {tasks.map((taskObj, index) => (
-              <li
-                key={index}
-                className={`myLI ${editIndex === index ? "editing-task" : "myLI"}`}
-              >
+              <li key={index} className={`myLI ${editIndex === index ? "editing-task" : "myLI"}`}>
                 {taskObj.task}
-                <select
-                  value={taskObj.status}
-                  onChange={(e) =>
+                <select value={taskObj.status} onChange={(e) =>
                     dispatch(
                       updateItem({ index, updatedStatus: e.target.value })
                     )
@@ -109,16 +109,10 @@ useEffect(() => {
                   <option value="Pending">Pending</option>
                   <option value="Completed">Completed</option>
                 </select>
-                <button
-                  className="update-button"
-                  onClick={() => StartEditing(index)}
-                >
+                <button className="update-button" onClick={() => StartEditing(index)}>
                   {editIndex === index ? "Editing..." : "Edit"}
                 </button>
-                <button
-                  className="delete-button"
-                  onClick={() => DeleteTask(index)}
-                >
+                <button className="delete-button" onClick={() => DeleteTask(index)} >
                   Delete
                 </button>
               </li>
